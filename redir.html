@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Confirmation Page</title>
+  <script>
+    // Function to append query parameters to the "unsubscribe" link
+    function appendQueryParams() {
+      const unsubscribeLink = document.getElementById('unsubscribe');
+      const currentUrl = new URL(window.location.href);
+      const queryParams = currentUrl.search; // Get query string, e.g., "?key=value"
+
+      // Update the "unsubscribe" link with the current query parameters
+      unsubscribeLink.href = unsubscribeLink.href + queryParams;
+    }
+
+    // Run the function on page load
+    window.onload = appendQueryParams;
+  </script>
+</head>
+<body>
+  <h1>Would you like to unsubscribe?</h1>
+  <p>
+    Yes, <a id="unsubscribe" href="https://script.google.com/macros/s/AKfycbyOQp_UgGJ0wRqvTUV_oIQyhSapcLiO22f0TUsDnpAxPYSay_0uVoCbnX9F4iaa9Qmt/exec">unsubscribe</a>.
+  </p>
+  <p>
+    No, <a href="https://www.instagram.com/ottawa_rcp/">keep me informed</a>.
+  </p>
+</body>
+</html>
